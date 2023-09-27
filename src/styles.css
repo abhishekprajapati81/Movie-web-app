@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb
+{
+background-color: #9c1515df;
+border-radius: 90px;
+
+}

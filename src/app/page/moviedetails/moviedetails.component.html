@@ -1,0 +1,48 @@
+<div class="container mt-5">
+  <div class="row p-5">
+    <div class="col-lg-2" *ngIf="getmoviedetailsresult.poster_path">
+      <img
+        src="https://image.tmdb.org/t/p/original/{{
+          getmoviedetailsresult.poster_path
+        }}"
+        alt=""
+      />
+    </div>
+    <div class="col-lg-10 mt-1">
+      <h1 class="mt-2 mb-2">{{ getmoviedetailsresult.original_title }}</h1>
+      <p class="mt-2 mb-3">{{ getmoviedetailsresult.overview }}</p>
+      <p class="mt-1 mb-3">
+        Release Date: {{ getmoviedetailsresult.release_date }}
+      </p>
+      <p class="mt-1 mb-3">
+        Movie Language: {{ getmoviedetailsresult.original_language }}
+      </p>
+      <a
+        type="button"
+        class="btn btn-danger"
+        href="https://www.themoviedb.org/video/play?key={{
+          getmovievideoresult
+        }}"
+        target="_blank"
+        >Watch Trailer</a
+      >
+    </div>
+    <div class="row mt-4 p-4 d-flex">
+      <h1 class="text-white">Top cast</h1>
+      <div class="col-lg-4" *ngFor="let v of getmovievideocastresult">
+        <div class="row mt-4 mb-2">
+          <div class="col-lg-2" *ngIf="v.profile_path">
+            <img
+              src="https://image.tmdb.org/t/p/original/{{ v.profile_path }}"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-10">
+            <h3 class="text-white">Name: {{ v.original_name }}</h3>
+            <h5 class="text-white">Character: {{ v.character }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

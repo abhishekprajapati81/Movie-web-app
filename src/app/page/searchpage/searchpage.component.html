@@ -1,0 +1,38 @@
+<!-- search page start -->
+<div class="container mt-5 p-5">
+  <form class="d-flex" [formGroup]="serchFrom" (ngSubmit)="submitfrom()">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Search movie here..."
+      formControlName="moviename"
+      aria-label="Search"
+    />
+    <button class="btn btn-outline-danger">Search </button>
+  </form>
+
+  <div class="row mt-5">
+    <div class="col lg-4" *ngFor="let ser of searchResult">
+      <div class="row">
+        <div class="col-lg-3 mt-3 mb-3">
+          <img src="https://image.tmdb.org/t/p/original/{{ ser.poster_path }}"  alt="img not faound">
+          
+        </div>
+        <div class="col-lg-9 mt-3 mb-3">
+          <h5>{{ser.original_title}}</h5>
+          <!-- <p>{{ser.overview}}</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- search page end -->
+
+<!-- movielist start -->
+
+
+
+
+
+<!-- movielist end -->
